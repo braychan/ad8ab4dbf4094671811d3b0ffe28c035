@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Upload Notebooks</title>
+	<link href="https://cdn.bootcdn.net/ajax/libs/milligram/1.4.1/milligram.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="column column-50 column-offset-25">
+                <h1>Upload Notebooks</h1>
+                <form method="post" enctype="multipart/form-data">
+                    {% csrf_token %}
+                    <input type="file" name="files" multiple="multiple" />
+                    <br><br>
+                    <input type="submit" value="Upload">
+                </form>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
