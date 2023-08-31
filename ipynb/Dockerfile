@@ -1,5 +1,5 @@
 # 基于Python官方镜像构建
-FROM python:3.9
+FROM python:3.11.5
 
 # 设置工作目录
 WORKDIR /app
@@ -8,6 +8,8 @@ WORKDIR /app
 COPY . /app
 
 # 安装依赖
+RUN pip install --upgrade pip
+RUN freeze > requirements
 RUN pip install -r requirements.txt
 
 # 对外暴露的端口号
