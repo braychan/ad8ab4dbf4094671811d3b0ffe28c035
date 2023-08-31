@@ -9,7 +9,7 @@ COPY . /app
 
 # 安装依赖
 RUN pip install --upgrade pip
-RUN freeze > requirements
+RUN pip freeze > requirements
 RUN pip install -r requirements.txt
 
 # 对外暴露的端口号
